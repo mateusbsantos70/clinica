@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo usuário | Luminosa</title>
+    <link rel="stylesheet" href="./login.css">
+</head>
+<body hidden data-perfil-exigido="ADMINISTRADOR">
+    <header class="cabecalho">
+        <a href="./inicio.html" class="logo">
+            <img src="./img/logo.png" alt="Logotipo da Clínica Luminosa">
+        </a>
+
+        <nav class="menu" aria-label="Menu principal">
+            <a href="./inicio.html">Início</a>
+            <a href="./tratamentos.html">Tratamentos</a>
+            <a href="./sobre.html">Sobre Nós</a>
+            <a href="./contato.html">Contato</a>
+        </nav>
+
+        <button type="button" id="sair" class="botao">Sair</button>
+    </header>
+
+    <div class="container">
+        <main>
+            <h1>Novo usuário</h1>
+            <p class="subtitulo">Cadastre um membro da equipe. Só administradores veem esta tela.</p>
+
+            <form id="form-cadastro" class="tela">
+                <div class="campo">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" name="nome" autocomplete="off" required>
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" autocomplete="off" required>
+                </div>
+
+                <div class="campo">
+                    <label for="perfil">Perfil</label>
+                    <select id="perfil" name="perfil" required>
+                        <option value="RECEPCIONISTA">Recepcionista</option>
+                        <option value="ADMINISTRADOR">Administrador</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha (mínimo 8 caracteres)</label>
+                    <input type="password" id="senha" name="senha" autocomplete="new-password" minlength="8" required>
+                </div>
+
+                <div class="campo">
+                    <label for="confirmar">Confirmar senha</label>
+                    <input type="password" id="confirmar" name="confirmar" autocomplete="new-password" minlength="8" required>
+                </div>
+
+                <p id="mensagem-erro" role="alert"></p>
+
+                <button type="submit" class="botao">Cadastrar</button>
+            </form>
+        </main>
+
+        <div class="img-login" role="img" aria-label="Recepção da clínica Luminosa"></div>
+    </div>
+
+    <script src="./protegido.js"></script>
+    <script src="./inatividade.js"></script>
+    <script src="./auth.js"></script>
+</body>
+</html>

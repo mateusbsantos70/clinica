@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3b2f26;
+    background-color: #f6f1ea;
+    line-height: 1.5;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 14px 40px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e6dccf;
+}
+
+.logo img {
+    display: block;
+    height: 44px;
+    width: auto;
+}
+
+.menu {
+    display: flex;
+    gap: 28px;
+}
+
+.menu a {
+    color: #3b2f26;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.menu a:hover,
+.menu a[aria-current="page"] {
+    color: #a0693a;
+}
+
+/* Botão */
+.botao {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #8a5a33;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+.botao:hover {
+    background-color: #6f4624;
+}
+
+a:focus-visible {
+    outline: 3px solid #3b2f26;
+    outline-offset: 3px;
+}
+
+/* Conteúdo */
+.pagina {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 48px 20px;
+}
+
+h1 {
+    margin: 0 0 8px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.4rem;
+}
+
+.subtitulo {
+    margin: 0 0 32px;
+}
+
+.grade {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.cartao {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    background-color: #ffffff;
+    border: 1px solid #e6dccf;
+    border-radius: 12px;
+}
+
+.cartao h2 {
+    margin: 0 0 8px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.4rem;
+}
+
+.cartao p {
+    margin: 0 0 12px;
+}
+
+.duracao {
+    font-size: 0.9rem;
+    color: #6b5d50;
+}
+
+.cartao .botao {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+/* Celular */
+@media (max-width: 800px) {
+    .cabecalho {
+        flex-direction: column;
+        padding: 14px 20px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+}

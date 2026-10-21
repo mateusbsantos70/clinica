@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Consulta | Luminosa</title>
+    <link rel="stylesheet" href="./agendar.css">
+</head>
+<body>
+    <main class="pagina">
+        <h1>Agendar Consulta</h1>
+        <p class="subtitulo">Escolha o tratamento, o dia e o horário.</p>
+
+        <form id="form-agendar" novalidate>
+            <div class="campo">
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" name="nome" autocomplete="name" required>
+            </div>
+
+            <div class="campo">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" name="telefone" autocomplete="tel" required>
+            </div>
+
+            <div class="campo">
+                <label for="tratamento">Tratamento</label>
+                <select id="tratamento" name="tratamento" required>
+                    <option value="">Selecione...</option>
+                    <option>Clínica geral</option>
+                    <option>Odontologia</option>
+                    <option>Fisioterapia</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="data">Data</label>
+                <input type="date" id="data" name="data" required>
+            </div>
+
+            <fieldset class="campo">
+                <legend>Horário</legend>
+                <div id="horarios" class="horarios">
+                    <p class="aviso">Escolha uma data para ver os horários.</p>
+                </div>
+            </fieldset>
+
+            <p id="mensagem" role="alert"></p>
+
+            <button type="submit" class="botao">Confirmar agendamento</button>
+        </form>
+    </main>
+
+    <script src="./agendar.js"></script>
+</body>
+</html>

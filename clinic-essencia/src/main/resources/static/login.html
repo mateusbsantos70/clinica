@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar | Luminosa</title>
+    <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <a href="./login.html" class="logo">
+            <img src="./img/logo.png" alt="Logotipo da Clínica Luminosa">
+        </a>
+
+        <nav class="menu" aria-label="Menu principal">
+            <a href="./inicio.html">Início</a>
+            <a href="./tratamentos.html">Tratamentos</a>
+            <a href="./sobre.html">Sobre Nós</a>
+            <a href="./contato.html">Contato</a>
+        </nav>
+
+        <a href="./agendar.html" class="botao">Agendar Consulta</a>
+    </header>
+
+    <div class="container">
+        <main>
+            <h1>Entrar</h1>
+            <p class="subtitulo">Acesso restrito à equipe da clínica.</p>
+
+            <form id="form-login" class="tela">
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" autocomplete="username" required>
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" autocomplete="current-password" required>
+                </div>
+
+                <p id="mensagem-erro" role="alert"></p>
+
+                <button type="submit" class="botao">Entrar</button>
+            </form>
+
+            <p class="troca">Precisa de acesso? Fale com o administrador.</p>
+        </main>
+
+        <div class="img-login" role="img" aria-label="Recepção da clínica Luminosa"></div>
+    </div>
+
+    <script src="./auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3b2f26;
+    background-color: #f6f1ea;
+    line-height: 1.5;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 14px 40px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e6dccf;
+}
+
+.logo img {
+    display: block;
+    height: 44px;
+    width: auto;
+}
+
+.menu {
+    display: flex;
+    gap: 28px;
+}
+
+.menu a {
+    color: #3b2f26;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.menu a:hover {
+    color: #a0693a;
+}
+
+/* Botões */
+.botao {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #8a5a33;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: #6f4624;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid #3b2f26;
+    outline-offset: 2px;
+}
+
+/* Formulário + imagem lado a lado */
+.container {
+    display: flex;
+    min-height: calc(100vh - 73px);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+h1 {
+    margin: 0 0 8px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.4rem;
+}
+
+.subtitulo {
+    margin: 0 0 32px;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #cdbfae;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+#mensagem-erro {
+    min-height: 1.5em;
+    margin: 0 0 12px;
+    color: #b3261e;
+}
+
+form .botao {
+    width: 100%;
+}
+
+.img-login {
+    flex: 1;
+    background-image: url("./img/Gemini_Generated_Image_kgwtuvkgwtuvkgwt.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Celular */
+@media (max-width: 800px) {
+    .cabecalho {
+        flex-direction: column;
+        padding: 14px 20px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .container {
+        flex-direction: column-reverse;
+        min-height: auto;
+    }
+
+    .img-login {
+        flex: none;
+        height: 220px;
+    }
+
+    main {
+        max-width: none;
+        padding: 32px 20px;
+    }
+}
+
+/* Links de troca entre login e cadastro */
+.troca {
+    margin: 20px 0 0;
+    text-align: center;
+}
+
+.troca a {
+    color: #8a5a33;
+    font-weight: 600;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+#mensagem-erro.ok {
+    color: #1e6b3a;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    color: inherit;
+    border: 1px solid #cdbfae;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
