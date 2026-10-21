@@ -31,3 +31,5 @@ DB_USERNAME=clinic_app
 DB_PASSWORD=senha_do_banco
 ADMIN_EMAIL=admin@example.com
 ADMIN_SENHA=uma_senha_com_no_minimo_8_caracteres
+```
+
