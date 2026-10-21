@@ -4,8 +4,8 @@ O front fica em `src/main/resources/static` e é servido pelo próprio Spring.
 Abra http://localhost:8080/login.html (não use o Live Server).
 
 ## Como rodar
-1. MySQL rodando, com o banco `essencia_viva` e o usuário `clinic_app` do application.yml.
-2. Copie suas imagens (logo.png e a foto da recepção) para `src/main/resources/static/img/`.
+1. MySQL rodando, com o banco `essencia_viva` criado.
+2. Configure `DB_URL`, `DB_USERNAME` e `DB_PASSWORD` no IntelliJ.
 3. Defina as variáveis de ambiente do primeiro administrador (no IntelliJ: Run > Edit Configurations > Environment variables):
    `ADMIN_EMAIL=admin@luminosa.com;ADMIN_SENHA=UmaSenhaForte123`
 4. Rode `ClinicEssenciaApplication`. O Flyway cria as tabelas e o administrador é criado na primeira vez.
