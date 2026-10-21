@@ -17,3 +17,17 @@ Abra http://localhost:8080/login.html (não use o Live Server).
 - GET  /api/auth/me                      -> dados de quem está logado
 - POST /api/usuarios     (só ADMINISTRADOR) {nome, email, senha, perfil}
 - GET  /api/health
+## Variáveis de ambiente
+
+No IntelliJ, abra:
+
+`Run > Edit Configurations > Environment variables`
+
+Configure:
+
+```text
+DB_URL=jdbc:mysql://127.0.0.1:3306/essencia_viva?serverTimezone=America/Sao_Paulo&useSSL=false&allowPublicKeyRetrieval=true
+DB_USERNAME=clinic_app
+DB_PASSWORD=senha_do_banco
+ADMIN_EMAIL=admin@example.com
+ADMIN_SENHA=uma_senha_com_no_minimo_8_caracteres
