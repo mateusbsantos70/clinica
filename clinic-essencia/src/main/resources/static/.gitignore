@@ -1,0 +1,10 @@
+.env
+.env.*
+!.env.example
+
+.idea/
+*.iml
+clinic-essencia/target/
+
+.DS_Store
+Thumbs.db
